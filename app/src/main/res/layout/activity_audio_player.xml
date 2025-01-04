@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bgAudioPlayer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_lullabies"
+    android:foregroundGravity="center"
+    tools:context=".AudioPlayer">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="655dp"
+        android:layout_height="178dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.705">
+
+
+        <eightbitlab.com.blurview.BlurView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_color_50"
+            android:clickable="true"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="46dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/textAudioType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text="TextView"
+                    android:textColor="#fff"
+                    android:textSize="24sp"
+                    app:fontFamily="@font/gillsanub" />
+
+                <TextView
+                    android:id="@+id/audioTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Audio Clip"
+                    android:textColor="#fff"
+                    android:textSize="18sp"
+                    app:fontFamily="@font/antquab" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textPosition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="00:00"
+                        android:textColor="#fff" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar"
+                        android:layout_width="190dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+                        android:indeterminate="false"
+                        android:indeterminateTint="@android:color/white"
+                        android:secondaryProgressTint="@color/background_color_50" />
+
+                    <TextView
+                        android:id="@+id/textDuration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="00:00"
+                        android:textColor="#fff" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imgPrev"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="previousAudio"
+                        app:srcCompat="@drawable/previous_white_128" />
+
+                    <ImageView
+                        android:id="@+id/imgRewind"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="rewindAudio"
+                        app:srcCompat="@drawable/backward_white_128" />
+
+                    <ImageView
+                        android:id="@+id/imgPausePlay"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="pressPausePlayAudio"
+                        app:srcCompat="@drawable/play_white_128" />
+
+                    <ImageView
+                        android:id="@+id/imgFastForward"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="fastForwardAudio"
+                        app:srcCompat="@drawable/forward_white_128" />
+
+
+                    <ImageView
+                        android:id="@+id/imgNext"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="nextAudio"
+                        app:srcCompat="@drawable/next_white_128" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </eightbitlab.com.blurview.BlurView>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="1.0"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.leapworld.kidsvio">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/kidsvio_logo_transparent_1"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/kidsvio_logo_transparent_1"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".AudioList"
+            android:screenOrientation="landscape" ></activity>
+        <activity android:name=".AudioPlayer"
+            android:screenOrientation="landscape"  />
+        <activity
+            android:name=".ClaimReward"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".GameAfter"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Rewards"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ListenAudioClips"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".GuessTheMissingColor"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".NurseryRhymesGridView"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".CustomLoadingScreen"
+            android:noHistory="true"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Settings"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".FAQ"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Feedback"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".NurseryRhymes"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".NameTheAnimal"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".FunActivitiesAndGames"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Categories"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
